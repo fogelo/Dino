@@ -1,0 +1,60 @@
+.game {
+    width: 600px;
+    height: 200px;
+    border-bottom: solid 1px green;
+    margin: auto;
+}
+
+#dino {
+    width: 35px;
+    height: 35px;
+    /* border: solid 1px red; */
+    background-image: url(./img/dino.png);
+    background-size: 35px 35px;
+    position: relative;
+    top: 150px;
+}
+
+#cactus {
+    width: 35px;
+    height: 35px;
+    /* border: solid 1px blue; */
+    background-image: url(./img/cactus.png);
+    background-size: 35px 35px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    /* infinite - прлодолжается бесконечно, linear - ускорение анимации cactusMove - название анимации */
+    animation: cactusMov 2s infinite linear;
+}
+
+@keyframes cactusMov {
+    0% {
+        left: 580px;
+    }
+    100% {
+        left: -50px;
+    }
+}
+
+.jump {
+    animation: jump 0.75s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    30% {
+        top: 100px;
+    }
+    50% {
+        top: 25px;
+    }
+    80% {
+        top: 100px;
+    }
+    100% {
+        top: 150px;
+    }
+}
